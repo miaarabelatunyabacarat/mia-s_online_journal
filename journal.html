@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mia's Personal Blog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
+<style>
+body{
+	padding: 10px;
+	background-color:rgb(228, 223, 217);
+	margin: 0%;
+	font-family:Courier New ;
+}
+@font-face{
+	font-family: PixelFont;
+	src: url("PF_Pixelscript_Pro.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: Manstein;
+	src: url("Mainstein.ttf") format("truetype");
+}
+
+.navbar {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px;
+	color: #0b0b0b;
+}
+.logo{font-weight: bold;
+}
+.nav-links{
+	list-style:none;
+	display: flex;
+}
+.nav-links li{
+	margin-left: 20px;
+}
+.nav-links a{
+	color: #24212c;
+	text-decoration: none;
+	font-size: 1em;
+	transition: color 0.5ease;
+}
+
+.nav-item{
+	padding: 12px;
+}
+.nav-item:hover{
+	 background-color:#bab6bf;
+	 border-radius: 8px;
+	 transition: color 1s ease;
+	 background-color: 1s ease;
+}
+.dropdown {
+	position: relative;
+}
+.drpbtn {
+	background-color: transparent;
+	color: #24212c;
+	padding: 0px;
+	font-size: 1em;
+	border: none;
+	cursor: pointer;
+	transition: color 0.5ease;
+	font-family: Courier New;
+}
+.drpbtn:hover {
+	background-color: #bab6bf;
+	border-radius: 8px;
+	transition: color 1s ease;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	right: 0;
+}
+
+.dropdown-content a {
+	color: rgb(7, 7, 7);
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	
+}
+.dropdown-content a:hover {
+	background-color: #a0a3c9;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.dropdown:hover .drpbtn {
+	background-color: #bab6bf;
+}
+.post{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #b6bfc1;
+    border-radius: 15px;
+    border: rgb(172, 181, 193) 5px dashed;
+    box-shadow: gray 5px 5px 10px;
+    }
+.heart {
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  color: gray;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .heart {
+  color: red;
+  transform: scale(1.15);
+}
+
+header{
+  padding: clamp(0.75rem, 4vw, 1.25rem);      
+  margin-top: clamp(0.75rem, 4vw, 1.25rem);   
+  border-radius: clamp(0.5rem, 2vw, 0.9375rem); 
+  background-image: url(images/blu.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+header h1{
+	font-size: clamp(1.6rem, 5vw, 3rem);
+	margin: 0.25rem 0;
+}
+header p{
+	text-align: center;
+}
+h1{
+	font-family: PixelFont;
+	text-align: center;
+}
+h2{
+	font-weight: bold;
+}
+footer{
+	align-content: bottom;
+	padding: 10px;
+	clear: both; 
+	background-color:#d3d3d3;
+}	
+
+</style>
+</head>
+<body>
+    <nav class="navbar" style="background-color: #d3d3d3;">
+	<div class="logo"><b>My Blog</b></div>
+	<ul class="nav-links">
+		<li><a href="index.html" class="nav-item"> Home</a></li>
+		<li><a href="about.html" class="nav-item"> About</a></li> 
+		<li class="dropdown">
+			<button class="drpbtn">Diaries</button>
+			<div class="dropdown-content">
+				<a href="journal.html"> Journaling </a>
+				<a href="music.html"> Music </a>
+				<a href="moments.html"> Moments </a>
+				<a href="arts.html"> Art </a>
+			</div>
+		</li>
+	</ul>
+	</nav> 
+    <main>
+        <header>
+			<h1>Mia's Journal</h1>
+            <p style="text-align: center;">📕Where all thoughts and stories to come✒️</p>
+		</header>
+
+        <div class="post">
+            <h2>Exam Season Feels  ＞﹏＜</h2>
+            <h3>Dec. 10, 2025</h3>
+            <p>Exam season is already here! Quick reminder for you guys that grades dont define who you are. Kidding aside, but please take note to be kind to yourself, get some rest and take breaks. </p>
+			<p>Study well guys, let the results be from the efforts that you made. If you failed then sending virtual hugs 🫂, what matters the most is that you did well and hopefully make it up to it next time. Congratulations in advance!.</p>
+        <input type="checkbox" id="like">
+		<label for="like" class="heart">&#10084;</label>
+		</div>
+
+		<div class="post">
+            <h2>Quote of the day:</h2>
+            <h3>Dec. 7, 2025</h3>
+            <img src="images/qotdfinal.png" alt="quote of the day" style="border: slategray 0.3125rem solid; border-radius: 0.3125rem; height: auto; max-width:100%; width: 100%;">
+			 <input type="checkbox" id="like">
+			<label for="like" class="heart">&#10084;</label>
+        </div>
+		<div class="post">
+			<h2>Current Budol Finds</h2>
+			<h3>Dec. 5, 2025</h3>
+			<ul> grwm setting powder</ul>
+			<ul> stickers</ul>
+			<ul> pencil case</ul>
+			 <input type="checkbox" id="like">
+			<label for="like" class="heart">&#10084;</label>
+		</div>
+		<div class="post">
+            <h2>Things that make me happy!😊</h2>
+            <h3>Nov. 27, 2025</h3>
+            <ul> Food</ul>
+			<ul> Memes</ul>
+			<ul> Cats</ul>
+			<ul> Art</ul>
+			<ul> Stickers</ul>
+			 <input type="checkbox" id="like">
+			<label for="like" class="heart">&#10084;</label>
+        </div>
+
+		<div class="post">
+            <h2>Welcome!</h2>
+            <h3>Nov. 25, 2025</h3>
+            <p>Hello! This page is dedicated to my journal where its all about my weekkly entries, reflection, quote of the day or even some prompts for us to try together! Have fun reading!💌</p>
+			 <input type="checkbox" id="like">
+			<label for="like" class="heart">&#10084;</label>
+        </div>
+    </main>
+
+    <br>
+    <footer style="clear: both; background-color:#d3d3d3; padding: 10px;">
+	
+	<p style="text-align: center;"> for project purposes only</p>
+	<p style="text-align: center;"><a href="https://github.com/miaarabelatunyabacarat" target="_blank" aria-label="GitHub"  style="margin-right:15px; text-decoration:none; color:black;">  <i class="fab fa-github" style="font-size:30px;"></i></a>
+	<a href="https://www.instagram.com/mirabella_creates" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="text-decoration:none; color:black;"><i class="fab fa-instagram" style="font-size:30px;"></i></a>
+	</p>
+	<p style="text-align: center;"> Credits to photos from: pinterest</p>
+	<p style="text-align: center;"> All artworks and collages are made by me.</p>
+	</footer>
+</body>
+</html>
